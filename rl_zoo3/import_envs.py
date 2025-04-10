@@ -53,6 +53,8 @@ try:
 except ImportError:
     pass
 
+import force_push_rl
+
 
 # Register no vel envs
 def create_no_vel_env(env_id: str) -> Callable[[Optional[str]], gym.Env]:

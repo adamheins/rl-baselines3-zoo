@@ -211,6 +211,25 @@ Swimmer-v4:
   <<: *mujoco-defaults
   gamma: 0.999
 
+ForcePush-v0:
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+  # policy: 'MlpLstmPolicy'
+  ent_coef: 'auto'
+  learning_rate: 0.001
+  learning_starts: 100000
+  buffer_size: 100000
+  policy_kwargs: "dict(net_arch=[256, 256])"
+
+ForcePush2-v0:
+  n_timesteps: !!float 2e6
+  policy: 'MlpPolicy'
+  ent_coef: 'auto'
+  learning_rate: 0.0001
+  learning_starts: 100000
+  buffer_size: 100000
+  policy_kwargs: "dict(net_arch=[256, 256])"
+
 # === HER Robotics GoalEnvs ===
 
 FetchReach-v1:
